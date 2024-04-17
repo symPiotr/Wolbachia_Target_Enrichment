@@ -5,10 +5,10 @@
 ### 2. TE kit design
 
 ### 3. Validation of target enrichment performance: sample selection and laboratory steps
-[Performance asessment - concept and labwork](Performance_assessment_concept_lab.md)
+[Performance asessment - concept and labwork](validation/Performance_assessment_concept_lab.md)
 
 ### 4. Validation of target enrichment performance: bioinformatics and visualization steps
-[Performance asessment](Performance_assessment_bioinfo.md)
+[Performance asessment](validation/Performance_assessment_bioinfo.md)
 
 ### 5. Data analysis procedure, and its demonstration on test samples
 [Data analysis procedures](Data_analysis.md)
