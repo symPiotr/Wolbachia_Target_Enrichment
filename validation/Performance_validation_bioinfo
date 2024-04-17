@@ -1,7 +1,7 @@
 bwa mem -t 40 -k 15 -B 2 -L 2 -U 10 -T 80 #Performance_validation_bioinfo
 
 ```
-Concatenated_target_seqs.fasta ../filtered_data/MG1_R1.fq.gz ../filtered_data/MG1_R2.fq.gz | samtools view -b -S -F 12 - | samtools sort - > MG1.bam
+bwa mem -t 40 -k 15 -B 2 -L 2 -U 10 -T 80 Concatenated_target_seqs.fasta ../filtered_data/MG1_R1.fq.gz ../filtered_data/MG1_R2.fq.gz | samtools view -b -S -F 12 - | samtools sort - > MG1.bam
 
 samtools index MG1.bam
 
@@ -9,3 +9,7 @@ while read target; do echo $target; samtools view -P -o MG1/"$target".bam MG1.ba
     # -P --fetch-pairs          Retrieve complete pairs even when outside of region
 
 samtools fastq -1 MG1_phy_RefSeq_WP_041580602_R1.fq -2 MG1_phy_RefSeq_WP_041580602_R2.fq -s MG1_phy_RefSeq_WP_041580602_s.fq phy_RefSeq_WP_041580602.bam
+
+spades.py --pe-1 1 MG1_phy_RefSeq_WP_041580602_R1.fq --pe-2 1 MG1_phy_RefSeq_WP_041580602_R2.fq --pe-s 1 MG1_phy_RefSeq_WP_041580602_s.fq -o MG1_phy_RefSeq_WP_041580602
+
+nhmmer --tblout lets.see -E 1e-10 ~/20240415_Wolbachia_TE/targets/hmms/RefSeq_WP_041580602.1.fa.hmm scaffolds.fasta
