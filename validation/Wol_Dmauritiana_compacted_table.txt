@@ -1,4 +1,4 @@
-Contig	Pos	Target	MG1	TE1
+Contig_name	Position	Target_name_or_target_neighborhood	coverage_lib_MG1	coverage_lib_TE1
 CP034335_wMau	1	0	45.76	7.0
 CP034335_wMau	51	0	53.96	6.6
 CP034335_wMau	101	0	51.84	4.0
