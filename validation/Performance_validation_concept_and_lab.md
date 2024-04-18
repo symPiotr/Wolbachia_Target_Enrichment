@@ -14,7 +14,7 @@ The wrapper script for the steps above is provided - [20240418_mapping_reads_to_
 We then combined information on *Wolbachia* genome coverage based on Target Enrichment and on unenriched Metagenomic dataset for the same biological samples with information on location of the targetted regions without the reference Wolbachia genomes. We then computed the average genomic coverage in 50-bp windows. Simultaneoulsy, we extracted information for each 50bp window whether any of its bases corresponds to the targetted region, or is within 500bp from the targetted region; if so, we classified the window as "on target", or "within target neighbourhood". We then visualized the coverage across the windows, within the initial 100kb of each genome, and for different target categories (phylogenetic, pathway, special) within entire genomes, using a custom Processing VERSION script. The Python script for combining information from across tables, the final tables for the four genomes, and the Processing script for data visualization are provided.  
   * [20240418_Combining_coverage_tables.py](ref)
   * [20240418_Genome_coverage_visualization.pyde](ref)
-  * Data_tables: [Drosophila melanogaster / wMel](ref), [Drosophila mauritiana / wXXX](ref), [Brugia pahangi / wXXX](ref), [Armadillium vulgare / wXXX](ref).
+  * Data_tables: [Drosophila melanogaster / wMel](Wol_Dmelanogaster_compacted_table.txt), [Drosophila mauritiana / wXXX](Wol_Dmauritiana_compacted_table.txt), [Brugia pahangi / wXXX](Wol_Brugiapahangi_compacted_table.txt), [Armadillium vulgare / wXXX](Wol_Avulgare_compacted_table.txt).
 
   
 
