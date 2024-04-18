@@ -1,4 +1,4 @@
-Contig	Pos	Target	MG6	TE6
+Contig_name	Position	Target_name_or_target_neighborhood	coverage_lib_MG6	coverage_lib_TE6
 ALWU01000001.1	1	0	0.0	0.0
 ALWU01000001.1	51	0	0.0	0.0
 ALWU01000001.1	101	0	0.0	0.0
