@@ -1,4 +1,4 @@
-Contig	Pos	Target	MG4	TE4
+Contig_name	Position	Target_name_or_target_neighborhood	coverage_lib_MG4	coverage_lib_TE4
 NC_002978.6_wMel	1	1	17.56	179.78
 NC_002978.6_wMel	51	1	24.74	189.62
 NC_002978.6_wMel	101	1	23.4	136.46
