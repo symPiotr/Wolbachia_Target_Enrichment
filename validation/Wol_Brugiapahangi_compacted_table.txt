@@ -1,4 +1,4 @@
-Contig	Pos	Target	MG5	TE5
+Contig_name	Position	Target_name_or_target_neighborhood	coverage_lib_MG5	coverage_lib_TE5
 CP050521.1_FR3	1	1	16.74	1393.5
 CP050521.1_FR3	51	path_RefSeq_WP_010082013	18.58	2101.0
 CP050521.1_FR3	101	path_RefSeq_WP_010082013	15.42	2783.64
