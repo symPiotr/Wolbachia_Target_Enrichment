@@ -1,5 +1,7 @@
 # Performance validation
 
+### 1. Validation of the target enrichment process
+
 To validate the approach, we have conducted Wolbachia target enrichment using DNA for four "reference" samples, invertebrates infected by different Wolbachia strains representing four supergroups that have had their genomes completely sequenced. 
 The species are listed in [Table S1](Validation_Table_S1.txt).
 For each of these samples, we prepared a library using NEBNext UltraExpress DNA kit, using half of the recommended reaction volume. After ligation of adapter stub and before indexing, the reaction was further divided into two halves, each of which was indexed with a different set of dual-unique indexes. Subsequently, for each sample, we used one of the resulting libraries for target enrichment reaction. For that, we prepared two pools, each including two experimental libraries and two others, combined at equimolar volumes. 
@@ -16,7 +18,18 @@ We then combined information on *Wolbachia* genome coverage based on Target Enri
   * [20240418_Genome_coverage_visualization.pyde](ref)
   * Data_tables: [Drosophila melanogaster / wMel](Wol_Dmelanogaster_compacted_table.txt), [Drosophila mauritiana / wXXX](Wol_Dmauritiana_compacted_table.txt), [Brugia pahangi / wXXX](Wol_Brugiapahangi_compacted_table.txt), [Armadillium vulgare / wXXX](Wol_Avulgare_compacted_table.txt).
 
+The Combining_coverage_tables script also computes the average coverage for e
+    
+### 2. Testing the ability to reconstruct genes and pathways
   
+For all targets, we have compared their presence within the reference genomes, and within the metagenomic and target enrichment datasets.
+We used [nhmmer - part of HMMER 3.4](http://hmmer.org/) to search for each target within each genome, with e-value set to e-10, and used esl-sfetch to extract the target region coordinates and sequences.
+
+We have used bam files constructed by mapping reads to the reference genomes, as explained above, then used samtools view to export reads mapped to each targetted region, and samtools fastq to export these reads.
+
+
+
+
 
 
 
