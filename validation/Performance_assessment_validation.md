@@ -4,12 +4,12 @@
 
 To validate the approach, we have conducted Wolbachia target enrichment using DNA for four "reference" samples, invertebrates infected by different Wolbachia strains representing four supergroups that have had their genomes completely sequenced. 
 The species are listed in [Table S1](Validation_Table_S1.txt).
-For each of these samples, we prepared a library using NEBNext UltraExpress DNA kit, using half of the recommended reaction volume. After ligation of adapter stub and before indexing, the reaction was further divided into two halves, each of which was indexed with a different set of dual-unique indexes. Subsequently, for each sample, we used one of the resulting libraries for target enrichment reaction. For that, we prepared two pools, each including two experimental libraries and two others, combined at equimolar volumes. 
-For the enrichment reaction, we followed the Standard protocol from MyBaits Manual v.5.0.3, with the hybridization temparature set to 60C.  
+For each of these samples, we prepared a library using NEBNext UltraExpress DNA kit, using half of the recommended reaction volume. After ligation of adapter stub and before indexing, the reaction was further divided into two halves, each of which was indexed with a different set of dual-unique indexes. Subsequently, for each sample, we used one of the resulting libraries for target enrichment reaction. This was done as two pools of four libraries, each including two experimental libraries and two others, combined at equimolar volumes. 
+For the enrichment reaction, we followed the Standard protocol from Arbor BioSciences' MyBaits Manual v.5.0.3, with the hybridization temparature set to 60C.  
   
 We combined the post-enrichment libraries with uncaptured libraries for the same samples for sequencing in an Illumina MiSeq v3 600-cycle flow cell. 
-
-The reads were trimmed with [Trim_Galore v. 0.6.10](https://github.com/FelixKrueger/TrimGalore), with the quality cutoff of 30 and length cutoff of 100bp.
+  
+The reads were trimmed with [Trim_Galore v. 0.6.10](https://github.com/FelixKrueger/TrimGalore), with the quality cutoff of 30 and length cutoff of 100bp.  
 Then, we used captured and uncaptured reads from each library for mapping against their respective reference *Wolbachia* genomes, using [bwa v. 0.7.17-r1188](https://github.com/lh3/bwa), with seed length set to 40 and minimum outputted score of 80, which largely resolved the issue of non-specific read mapping to lower-complexity regions of the genome. We then used [samtools v. 1.18](https://www.htslib.org/) to filter unmapped reads and sort bam files, and [qualimap v. 2.3](http://qualimap.conesalab.org/) to assess per-base coverage of the genomes. 
 The wrapper script for the steps above is provided - [20240418_mapping_reads_to_Wolbachia_genomes.py](20240418_mapping_reads_to_Wolbachia_genomes.py).  
   
