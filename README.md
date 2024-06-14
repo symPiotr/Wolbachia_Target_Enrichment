@@ -16,8 +16,7 @@ In this repository, we have gathered all details of computational and bioinforma
 In this section, we describe how we have tested the performance of the kit on metagenomic libraries prepared using DNA for insects hosting different Wolbachia supergroups.   
 Specifically, we explain the experimental design and present the samples; then we explain the laboratory steps; and finally, data analysis and visualization steps.
 
-### 4. [The bioinformatic pipeline for sequence reconstruction from metagenomic or target enrichment data](bioinformatics
-/Sequence_reconstruction_pipeline.md)
+### 4. [The bioinformatic pipeline for sequence reconstruction from metagenomic or target enrichment data](bioinformatics/Sequence_reconstruction_pipeline.md)
 Here, we explain steps for sequence reconstruction from metagenomic data.  
 We provide tools, parameters, and analysis scripts.
 
